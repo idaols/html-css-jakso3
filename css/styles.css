@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav-container li {
+    padding: 15px 20px;
+}
+
+.nav-container li a {
+    color: rgb(204, 96, 96);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-container li a:hover {
+    color: rgb(150, 69, 69);
+}
+
+.push {
+    margin-left: auto;
+}
+
+.search-input {
+    padding: 10px;
+    width: 13rem;
+    text-align: center;
+    border: 1px solid rgb(204, 96, 96);
+    border-radius: 8px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header"
+        "content-area content-area"
+        "menu-area1 menu-area2"
+        "footer footer";
+}
+
+.banner {
+    grid-area: header;
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.banner-color {
+    background-color: rgb(164, 192, 164);
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+}
+
+.banner-color p {
+    line-height: 23px;
+}
+
+
+.bannerimg {
+    background-image: url(../img/pasta.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    
+}
+
+.intro {
+    grid-area: content-area;
+    justify-self: center;
+    text-align: center;
+}
+
+.intro p {
+    line-height: 23px;
+}
+
+.menu1 {
+    grid-area: menu-area1;
+    justify-self: self-end;
+}
+
+.menu2 {
+    grid-area: menu-area2;
+    justify-self: self-start;
+}
+
+.footer {
+    grid-area: footer;
+    height: 5rem;
+}
+
+.menucard {
+    border: 1px dashed rgb(204, 96, 96);
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    height: 8rem;
+    background-color: rgb(243, 243, 243);
+}
+
+@media screen and (max-width: 710px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "content-area"
+            "menu-area1"
+            "menu-area2"
+            "footer";
+    }
+
+    .menucard {
+        justify-self: center;
+    }
+
+    .intro {
+        padding: 0 20px;
+    }
+  }
