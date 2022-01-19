@@ -93,16 +93,6 @@
     line-height: 23px;
 }
 
-/* .menu1 {
-    grid-area: menu-area1;
-    justify-self: self-end;
-}
-
-.menu2 {
-    grid-area: menu-area2;
-    justify-self: self-start;
-} */
-
 .footer {
     grid-area: footer;
     height: 5rem;
