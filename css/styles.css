@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: leipateksti;
 }
 
 :root {
@@ -222,7 +223,7 @@ p {
 }
 
 .menu-list li:nth-child(n+2) {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .menucard h2 {
